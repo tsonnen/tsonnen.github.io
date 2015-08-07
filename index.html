@@ -4,44 +4,74 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        function load(){
+            var location = window.location.hash.substr(1);
+            switch (location) {
+                case "about":
+                    $('#head').html("<h1>Tim Sonnen</h1>");
+                    $('#body').html("<img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
+                        "<br><br>I am currently a Freshman at University of" + 
+                        "Idaho, double majoring in Computer Science and Computer Engineering."+
+                        "I enjoy the outdoors and being active as well as keeping up on the latest technology news.");
+                    break;
+                case "embed":
+                    $('#head').html("<h1>Embedded Applications</h1>");
+                    $('#body').html("<a href=\"rfidUnlock.html\">" +
+                        "<img src=\"css/images/rfid.png\" class=\"img-rounded\" style=\"height:250px; width:350ox;\"></a>");
+                    break;
+                case "web":
+                    $('#head').html("<h1>Web Applications</h1>");
+                    $('#body').html("<a href=\"persWeb.html\">" + 
+                        "<img src=\"css/images/persWeb.png\" class=\"img-rounded\" style=\"height:250px; width:350px;\ border:2px #000000;\"></a>");
+            }
+        }
+        $(document).ready(function() {
+            load();
+            $(window).on('hashchange', function(){
+                load();
+            });
+        });
+    </script>
     <title>Tim Sonnen</title>
 </head>
 <body>
-    <div class="jumbotron">
+    <div id="head" class="jumbotron">
         <h1>Tim Sonnen</h1>
     </div>
-    <nav class="navbar navbar-default navbar-fixed">
-        <div class="container-fluid">
-            <div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Tim Sonnen</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li class="active"><a href="#about">About</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-                        <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#embed">Embedded Applications</a></li>
-                            <li><a href="#software">Software</a></li>
-                            <li><a href="#web">Web Services</a></li> 
+                            <li><a href="#web">Web Applications</a></li>
                         </ul>
                     </li>
+                    <li style="padding-top:3px; padding-bottom:0px;"><a href="http://github.com/tsonnen" style="padding-top:0px; padding-bottom:0px;"><button class="btn btn-primary" id="github" style="padding:none">
+                        <img border="0" alt="My GitHub" src="css/images/github.png" width="25" height="25">My Github</button></a>
+                    </li>
                 </ul>
-            </div>
+            </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="container-fluid">
-        <div id="about">
-            Tim Sonnen
-        </div>
-        <div id="embed">
-            Embedded applications
-        </div>
-        <div id="software">
-            Software
-        </div>
-        <div id="web">
-            Web stuff
-        </div>
+    <div id="body" class="container-fluid">
+        <img src="css/images/self.jpg" class="img-responsive img-circle" style="width:150px;height:auto" align="left" hspace="5">
+        <br><br>
+        I am currently a Freshman at University of Idaho, double majoring in Computer Science and Computer Engineering.
+        I enjoy the outdoors and being active as well as keeping up on the latest technology news.
     </div>
 </body>
 </html>

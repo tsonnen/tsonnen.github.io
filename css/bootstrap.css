@@ -1085,8 +1085,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
-  background-color: #333333;
+  color: #000000;
+  background-color: #F0F0F0;
 }
 input,
 button,
@@ -1608,6 +1608,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  color: #000000;
 }
 .row {
   margin-right: -15px;
@@ -3583,7 +3584,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #EDB8DC;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;
@@ -3613,9 +3614,9 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
+  color: #0000000;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #9B7A9B;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -4084,7 +4085,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #fff;
+  background-color: ##BE93B0;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -4541,22 +4542,22 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #EDB8DC;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #000000;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #000000;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777;
+  color: #000000;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #000000;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -4566,8 +4567,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #000000;
+  background-color: #9B7A9B;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4587,28 +4588,28 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  border-color: #9B7A9B;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #000000;
+  background-color: #9B7A9B;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777;
+    color: #000000;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
+    color: #000000;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
-    background-color: #e7e7e7;
+    color: #000000;
+    background-color: #9B7A9B;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -5005,10 +5006,8 @@ a.badge:focus {
 }
 .jumbotron {
   padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color: red;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -6640,6 +6639,9 @@ button.close {
   .visible-xs-inline-block {
     display: inline-block !important;
   }
+  .text{
+    font-size: 20px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
@@ -6659,6 +6661,9 @@ button.close {
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-block {
     display: block !important;
+  }
+  .text{
+    font-size: 25px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -6690,6 +6695,9 @@ button.close {
   .visible-md-block {
     display: block !important;
   }
+  .text{
+    font-size: 3opx;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-inline {
@@ -6714,6 +6722,9 @@ button.close {
   th.visible-lg,
   td.visible-lg {
     display: table-cell !important;
+  }
+  .text{
+    font-size: 35px;
   }
 }
 @media (min-width: 1200px) {
