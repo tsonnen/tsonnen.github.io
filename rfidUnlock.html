@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#exit').click(function(){
+                location.href="index.html#embed";
+            });
+        });
+    </script>
+    <title>RFID Unlock</title>
+</head>
+<body>
+    <div id="head" class="jumbotron">
+        <h1>RFID Computer Unlock</h1>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Tim Sonnen</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html#about">About</a></li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#embed">Embedded Applications</a></li>
+                            <li><a href="index.html#web">Web Applications</a></li>
+                        </ul>
+                    </li>
+                    <li style="padding-top:3px; padding-bottom:0px;"><a href="http://github.com/tsonnen" style="padding-top:0px; padding-bottom:0px;"><button class="btn btn-primary" id="github" style="padding:none">
+                        <img border="0" alt="My GitHub" src="css/images/github.png" width="25" height="25">My Github</button></a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div id="body" class="container-fluid">
+        <div class="text">
+            <p>The Idea behind this application was that I wanted a simpler way to unlock my computer. 
+            I was experimenting with RFID technology at the time and was interesting in developing a solution using this
+            solution.</p>
+            <p>As my computer does not actually have any GPIO pins, and I already had a RFID reader for the Arduino,
+            I decided to use this as my platform for my test. Also, since devices are accessable as files under Linux, I was able
+            to listen to the serial communications of the Arduino while it was connected via USB to my computer.</p>
+            <p>The code that runs on the PC that listens to the Arduino is written in C while the code that runs on the Arduino
+            is written in its native language(a set of C/C++)</p>
+            <p>Currently, this software is only functional under Linux with the Gnome desktop environment. However, I am
+            currently working on a way for it to interface with <code>xscreensaver</code> as it is more widely used.</p>
+            <a href="<!-- github repo -->"><button class="btn btn-primary">View project on Github!
+            <img border="0" alt="My GitHub" src="css/images/github.png" width="15" height="15"></button></a>
+            <button class="btn btn-primary" id="exit">Back</button>
+        </div>
+    </div>
+</body>
