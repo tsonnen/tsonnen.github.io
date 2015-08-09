@@ -4104,6 +4104,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   top: auto;
   left: auto;
 }
+.nav-left {
+    float: left !important;
+}
+.nav-right{
+  float: right !important;
+}
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li {
     display: table-cell;
@@ -4474,6 +4480,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
+
 @media (max-width: 767px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
