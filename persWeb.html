@@ -14,42 +14,27 @@
     <title>Personal Website</title>
 </head>
 <body>
-    <div id="head" class="jumbotron">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent;" align="left"><img src="css/images/menu.png">
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="index.html#about">About</a></li>
+            <li class="dropdown-header">Projects</li>
+            <li><a href="index.html#embed">Embedded Applications</a></li>
+            <li><a href="index.html#web">Web Applications</a></li>
+            <li style="padding-top:3px; padding-bottom:0px;"><a href="http://github.com/tsonnen" style="padding-top:0px; padding-bottom:0px;"><button class="btn btn-primary" id="github" style="padding:none">
+                <img border="0" alt="My GitHub" src="css/images/github.png" width="25" height="25">My Github</button></a>
+            </li>
+        </ul>
+    </div>
+    <div id="head" style="text-align:center;">
         <h1>Personal Website</h1>
     </div>
-    <nav class="navbar navbar-default">
-        <div class="container" style="padding-right: 0px; padding-left: 20px; margin-right: 0px; margin-left: 5px;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">TEST</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style ="margin-left: 3px; padding-left: 3px; "href="#">Tim Sonnen</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#embed">Embedded Applications</a></li>
-                            <li><a href="#web">Web Applications</a></li>
-                        </ul>
-                    </li>
-                    <li style="padding-top:3px; padding-bottom:0px;"><a href="http://github.com/tsonnen" style="padding-top:0px; padding-bottom:0px;"><button class="btn btn-primary" id="github" style="padding:none">
-                        <img border="0" alt="My GitHub" src="css/images/github.png" width="25" height="25">My Github</button></a>
-                    </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-    <div id="body" class="container-fluid">
-        <div class="text">
-            <p>I did all of the development and design of this website, with the help of jQuery and Twitter Bootstrap.</p>
-            <P>If you encounter any issues while navigating this website please do not hesitate to contact me through GitHub,
-            or to simply open an issue on the GitHub repository for this website as it is currently hosted through GitHub Pages.</p> 
+    <div class="text">
+        <p>I did all of the development and design of this website, with the help of jQuery and Twitter Bootstrap.</p>
+        <P>If you encounter any issues while navigating this website please do not hesitate to contact me through GitHub,
+        or to simply open an issue on the GitHub repository for this website as it is currently hosted through GitHub Pages.</p> 
+        <div style="text-align:center;">
             <a href="http://github.com/tsonnen/tsonnen.github.io"><button class="btn btn-primary">View project on Github!
             <img border="0" alt="My GitHub" src="css/images/github.png" width="15" height="15"></button></a>
             <button class="btn btn-primary" id="exit">Back</button>

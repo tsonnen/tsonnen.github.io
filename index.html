@@ -11,9 +11,9 @@
             switch (location) {
                 case "about":
                     $('#head').html("<h1>Tim Sonnen</h1>");
-                    $('#body').html("<img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
-                        "<br><br>I am currently a Freshman at University of " + 
-                        "Idaho, double majoring in Computer Science and Computer Engineering.");
+                    $('#body').html("<div class=\"text\"><img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
+                        "I am currently a Freshman at University of " + 
+                        "Idaho, double majoring in Computer Science and Computer Engineering.</div>");
                     break;
                 case "embed":
                     $('#head').html("<h1>Embedded Applications</h1>");
@@ -53,9 +53,10 @@
         <h1>Tim Sonnen</h1>
     </div>
     <div id="body">
-        <img src="css/images/self.jpg" class="img-responsive img-circle" style="width:150px;height:auto" align="left" hspace="5">
-        <br><br>
-        I am currently a Freshman at University of Idaho, double majoring in Computer Science and Computer Engineering.
+        <div class="text">
+            <img src="css/images/self.jpg" class="img-responsive img-circle" style="width:150px;height:auto" align="left" hspace="5">
+            I am currently a Freshman at University of Idaho, double majoring in Computer Science and Computer Engineering.
+        </div>
     </div>
 </body>
 </html>
