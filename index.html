@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript">
         function load(){
             var location = window.location.hash.substr(1);
             switch (location) {
                 case "about":
                     $('#head').html("<h1>Tim Sonnen</h1>");
-                    $('#body').html("<img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
-                        "<br><br>I am currently a Freshman at University of " + 
-                        "Idaho, double majoring in Computer Science and Computer Engineering.");
+                    $('#body').html("<div class=\"text\"><img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
+                        "I am currently a Freshman at University of " + 
+                        "Idaho, double majoring in Computer Science and Computer Engineering.</div>");
                     break;
                 case "embed":
                     $('#head').html("<h1>Embedded Applications</h1>");
@@ -35,6 +36,27 @@
     <title>Tim Sonnen</title>
 </head>
 <body>
-    <img src="css/images/menu.png" style="border:1px #000">
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent;" align="left"><img src="css/images/menu.png">
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#about">About</a></li>
+            <li class="dropdown-header">Projects</li>
+            <li><a href="#embed">Embedded Applications</a></li>
+            <li><a href="#web">Web Applications</a></li>
+            <li style="padding-top:3px; padding-bottom:0px;"><a href="http://github.com/tsonnen" style="padding-top:0px; padding-bottom:0px;"><button class="btn btn-primary" id="github" style="padding:none">
+                <img border="0" alt="My GitHub" src="css/images/github.png" width="25" height="25">My Github</button></a>
+            </li>
+        </ul>
+    </div>
+    <div id="head" style="text-align:center;">
+        <h1>Tim Sonnen</h1>
+    </div>
+    <div id="body">
+        <div class="text">
+            <img src="css/images/self.jpg" class="img-responsive img-circle" style="width:150px;height:auto" align="left" hspace="5">
+            I am currently a Freshman at University of Idaho, double majoring in Computer Science and Computer Engineering.
+        </div>
+    </div>
 </body>
 </html>
