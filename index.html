@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
-        function load(){
-            var location = window.location.hash.substr(1);
-            switch (location) {
-                case "about":
-                    $('#head').html("<h1>Tim Sonnen</h1>");
-                    $('#body').html("<img src=\"css/images/self.jpg\" class=\"img-responsive img-circle\" style=\"width:150px;height:auto\" align=\"left\" hspace=\"5\">"+
-                        "<br><br>I am currently a Freshman at University of " + 
-                        "Idaho, double majoring in Computer Science and Computer Engineering.");
-                    break;
-                case "embed":
-                    $('#head').html("<h1>Embedded Applications</h1>");
-                    $('#body').html("<a href=\"rfidUnlock.html\">" +
-                        "<img src=\"css/images/rfid.png\" class=\"img-rounded\" style=\"height:250px; width:350ox;\"></a>");
-                    break;
-                case "web":
-                    $('#head').html("<h1>Web Applications</h1>");
-                    $('#body').html("<a href=\"persWeb.html\">" + 
-                        "<img src=\"css/images/persWeb.png\" class=\"img-rounded\" style=\"height:250px; width:350px;\ border:2px #000000;\"></a>");
-            }
-        }
-        $(document).ready(function() {
-            load();
-            $(window).on('hashchange', function(){
-                load();
+        $(document).ready(function(){
+            $('#about').click(function(){
+                location.href="about.html";
+            });
+            $('#proj').click(function(){
+                location.href="proj.html";
+            });
+            $('#contact').click(function(){
+                location.href="contact.html";
+            });
+            $('#graph').click(function(){
+                location.href="graph.html";
             });
         });
     </script>
     <title>Tim Sonnen</title>
 </head>
 <body>
-    <img src="css/images/menu.png" style="border:1px #000">
+    <div class="jumbotron">
+        <h1>Tim Sonnen</h1>
+    </div>
+    <p>I am a freshman at University of Idaho with a double major in Computer Science and Computer Engineering. I have always been interested in computers and figuring out how they work.</p>
+    <button class="btn btn-primary" id="about">Read More</button>
+    <br><br>
+    <div style="width:1000px; margin:0 auto;">
+        <div class="box" style="text-align:center;">
+            <h3>Projects</h3>
+            <p>All past, present, and future projects that I have been involved with.</p>
+            <button class="btn btn-default" id="proj" style="text-align:center;">GO!</button>
+        </div>
+        <div class="box" style="text-align:center;">
+            <h3>Contact Me</h3>
+            <p>If you have any questions, concerns or comments, please do not hesitate to
+            follow this link to get in contact with me on various platforms.</p>
+            <button class="btn btn-default" id="contact" style="text-align:center;">GO!</button>
+        </div>
+        <div class="box" style="text-align:center;">
+            <h3>Graphic Design</h3>
+            <p>Graphic design projects that I have worked on.</p>
+            <button class="btn btn-default" id="graph" style="text-align:center;">GO!</button>
+        </div>
+    </div>
 </body>
 </html>
