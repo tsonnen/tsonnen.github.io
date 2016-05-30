@@ -22,86 +22,48 @@
         scripted Twitter bot that creates new quotes, using the inspiration of Linus Torvalds and Karl Marx. More quotes will 
         need to be added to each of the seed files, and I would like to have it create quotes that made a little bit more sense,
         but for now it works.</p>
-        <h3>main.py</h3
-        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #FF0000; background-color: #FFAAAA">!</span><span style="color: #333333">/</span>usr<span style="color: #333333">/</span><span style="color: #007020">bin</span><span style="color: #333333">/</span>env python
-<span style="color: #888888"># -*- coding: utf-8 -*-</span>
+        <h3>main.py</h3>
+        <pre style='color:#000020;background:#f6f8ff;'>!<span style='color:#44aadd; '>/</span>usr<span style='color:#44aadd; '>/</span>bin<span style='color:#44aadd; '>/</span>env python
+<span style='color:#595979; '># -*- coding: utf-8 -*-</span>
 
-<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">tweepy</span><span style="color: #333333">,</span> <span style="color: #0e84b5; font-weight: bold">time</span><span style="color: #333333">,</span> <span style="color: #0e84b5; font-weight: bold">sys</span><span style="color: #333333">,</span> <span style="color: #0e84b5; font-weight: bold">random</span><span style="color: #333333">,</span> <span style="color: #0e84b5; font-weight: bold">string</span>
+<span style='color:#200080; font-weight:bold; '>import</span> tweepy<span style='color:#308080; '>,</span> time<span style='color:#308080; '>,</span> sys<span style='color:#308080; '>,</span> random<span style='color:#308080; '>,</span> string
 
-<span style="color: #DD4422">&#39;&#39;&#39; Authenication information</span>
-<span style="color: #DD4422">    To reuse this code, just change the values to be valid for your account/app&#39;&#39;&#39;</span>
-CONSUMER_KEY <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;abc123&#39;</span>
-CONSUMER_SECRET <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;abc123&#39;</span>
-ACCESS_KEY <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;abc123&#39;</span>
-ACCESS_SECRET <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;abc123&#39;</span>
-auth <span style="color: #333333">=</span> tweepy<span style="color: #333333">.</span>OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth<span style="color: #333333">.</span>set_access_token(ACCESS_KEY, ACCESS_SECRET)
-api <span style="color: #333333">=</span> tweepy<span style="color: #333333">.</span>API(auth)
+<span style='color:#595979; '>''' Authenication information</span>
+<span style='color:#595979; '>&#xa0;&#xa0;&#xa0;&#xa0;To reuse this code, just change the values to be valid for your account/app'''</span>
+CONSUMER_KEY <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>'abc123'</span>
+CONSUMER_SECRET <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>'abc123'</span>
+ACCESS_KEY <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>'abc123'</span>
+ACCESS_SECRET <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>'abc123'</span>
+auth <span style='color:#308080; '>=</span> tweepy<span style='color:#308080; '>.</span>OAuthHandler<span style='color:#308080; '>(</span>CONSUMER_KEY<span style='color:#308080; '>,</span> CONSUMER_SECRET<span style='color:#308080; '>)</span>
+auth<span style='color:#308080; '>.</span>set_access_token<span style='color:#308080; '>(</span>ACCESS_KEY<span style='color:#308080; '>,</span> ACCESS_SECRET<span style='color:#308080; '>)</span>
+api <span style='color:#308080; '>=</span> tweepy<span style='color:#308080; '>.</span>API<span style='color:#308080; '>(</span>auth<span style='color:#308080; '>)</span>
 
-torvtxt <span style="color: #333333">=</span> <span style="color: #007020">open</span>(<span style="background-color: #fff0f0">&#39;torvalds.txt&#39;</span>)
-torvlines <span style="color: #333333">=</span> torvtxt<span style="color: #333333">.</span>read()<span style="color: #333333">.</span>splitlines()
-torvtxt<span style="color: #333333">.</span>close()
+torvtxt <span style='color:#308080; '>=</span> <span style='color:#400000; '>open</span><span style='color:#308080; '>(</span><span style='color:#1060b6; '>'torvalds.txt'</span><span style='color:#308080; '>)</span>
+torvlines <span style='color:#308080; '>=</span> torvtxt<span style='color:#308080; '>.</span>read<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>.</span>splitlines<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>
+torvtxt<span style='color:#308080; '>.</span>close<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>
 
-marxtxt <span style="color: #333333">=</span> <span style="color: #007020">open</span>(<span style="background-color: #fff0f0">&#39;marx.txt&#39;</span>)
-marxlines <span style="color: #333333">=</span> marxtxt<span style="color: #333333">.</span>read()<span style="color: #333333">.</span>splitlines()
-marxtxt<span style="color: #333333">.</span>close()
+marxtxt <span style='color:#308080; '>=</span> <span style='color:#400000; '>open</span><span style='color:#308080; '>(</span><span style='color:#1060b6; '>'marx.txt'</span><span style='color:#308080; '>)</span>
+marxlines <span style='color:#308080; '>=</span> marxtxt<span style='color:#308080; '>.</span>read<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>.</span>splitlines<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>
+marxtxt<span style='color:#308080; '>.</span>close<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>
 
 
-<span style="color: #008800; font-weight: bold">while</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">2</span>: <span style="color: #888888"># Go on forever</span>
-    tweetln  <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;&#39;</span>
-    <span style="color: #008800; font-weight: bold">while</span> (<span style="color: #007020">len</span>(tweetln) <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">28</span>):
-        torvline <span style="color: #333333">=</span> random<span style="color: #333333">.</span>choice(torvlines)
-        marxline <span style="color: #333333">=</span> random<span style="color: #333333">.</span>choice(marxlines)
-        torvsub <span style="color: #333333">=</span> random<span style="color: #333333">.</span>choice(torvline<span style="color: #333333">.</span>split())
-        marxsub <span style="color: #333333">=</span> random<span style="color: #333333">.</span>choice(marxline<span style="color: #333333">.</span>split())
-        <span style="color: #008800; font-weight: bold">if</span> tweetln <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&#39;&#39;</span>:
-            tweetln <span style="color: #333333">=</span>  torvsub <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39; &#39;</span> <span style="color: #333333">+</span> marxsub
-        <span style="color: #008800; font-weight: bold">else</span>:
-            tweetln  <span style="color: #333333">=</span> tweetln <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39; &#39;</span> <span style="color: #333333">+</span> torvsub <span style="color: #333333">+</span> <span style="background-color: #fff0f0">&#39; &#39;</span> <span style="color: #333333">+</span> marxsub
+<span style='color:#200080; font-weight:bold; '>while</span> <span style='color:#008c00; '>1</span> <span style='color:#44aadd; '>&lt;</span> <span style='color:#008c00; '>2</span><span style='color:#308080; '>:</span> <span style='color:#595979; '># Go on forever</span>
+    tweetln  <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>''</span>
+    <span style='color:#200080; font-weight:bold; '>while</span> <span style='color:#308080; '>(</span><span style='color:#400000; '>len</span><span style='color:#308080; '>(</span>tweetln<span style='color:#308080; '>)</span> <span style='color:#44aadd; '>&lt;</span> <span style='color:#008c00; '>28</span><span style='color:#308080; '>)</span><span style='color:#308080; '>:</span>
+        torvline <span style='color:#308080; '>=</span> random<span style='color:#308080; '>.</span>choice<span style='color:#308080; '>(</span>torvlines<span style='color:#308080; '>)</span>
+        marxline <span style='color:#308080; '>=</span> random<span style='color:#308080; '>.</span>choice<span style='color:#308080; '>(</span>marxlines<span style='color:#308080; '>)</span>
+        torvsub <span style='color:#308080; '>=</span> random<span style='color:#308080; '>.</span>choice<span style='color:#308080; '>(</span>torvline<span style='color:#308080; '>.</span>split<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>)</span>
+        marxsub <span style='color:#308080; '>=</span> random<span style='color:#308080; '>.</span>choice<span style='color:#308080; '>(</span>marxline<span style='color:#308080; '>.</span>split<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#308080; '>)</span>
+        <span style='color:#200080; font-weight:bold; '>if</span> tweetln <span style='color:#44aadd; '>==</span> <span style='color:#1060b6; '>''</span><span style='color:#308080; '>:</span>
+            tweetln <span style='color:#308080; '>=</span>  torvsub <span style='color:#44aadd; '>+</span> <span style='color:#1060b6; '>' '</span> <span style='color:#44aadd; '>+</span> marxsub
+        <span style='color:#200080; font-weight:bold; '>else</span><span style='color:#308080; '>:</span>
+            tweetln  <span style='color:#308080; '>=</span> tweetln <span style='color:#44aadd; '>+</span> <span style='color:#1060b6; '>' '</span> <span style='color:#44aadd; '>+</span> torvsub <span style='color:#44aadd; '>+</span> <span style='color:#1060b6; '>' '</span> <span style='color:#44aadd; '>+</span> marxsub
 
-    <span style="color: #008800; font-weight: bold">print</span>(tweetln)
-    api<span style="color: #333333">.</span>update_status(tweetln)
-    time<span style="color: #333333">.</span>sleep(<span style="color: #0000DD; font-weight: bold">900</span>)<span style="color: #888888">#Tweet every 15 minutes</span>
-</pre></td></tr></table></div>
-
+    <span style='color:#200080; font-weight:bold; '>print</span><span style='color:#308080; '>(</span>tweetln<span style='color:#308080; '>)</span>
+    api<span style='color:#308080; '>.</span>update_status<span style='color:#308080; '>(</span>tweetln<span style='color:#308080; '>)</span>
+    time<span style='color:#308080; '>.</span>sleep<span style='color:#308080; '>(</span><span style='color:#008c00; '>900</span><span style='color:#308080; '>)</span><span style='color:#595979; '>#Tweet every 15 minutes</span>
+</pre>
+        <p>This code relies on tweepy, which handles the Twitter API. If you do not have it installed on your machine, you can install it (Linux and OS X) by typing <code> pip install tweepy</code></p>
         <p>The source files that it draws from are just plain text with one quote per line.</p> 
         <div style="text-align:center;">
             <a href="http://twitter.com/MarxistTorvalds"><button class="btn btn-primary">See it in action!
