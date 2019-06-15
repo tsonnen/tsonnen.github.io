@@ -15,8 +15,8 @@ Please feel free to contact me with any questions, bugs, or feature requests.
 <a href="https://play.google.com/store/apps/details?id=com.tsonnen.initiativetracker"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
 
 ## Releases
-* [1.1.31](###1.1.31) (Current Build)
-* [1.0.0](###1.0.0)
+* [1.1.31](#1131) (Current Build)
+* [1.0.0](#100)
 
 ### 1.1.31
 First update.
