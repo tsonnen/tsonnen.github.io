@@ -2,7 +2,8 @@
 layout: post
 title:  "Flutter!"
 date:   2019-06-12 11:59:45 -0800
-categories: project
+category: project
+tags: [flutter, basic]
 ---
 
 ![Bad Flutter Code]({{ site.baseurl }}{% link assets/img/2019-06-12-Header.png %})

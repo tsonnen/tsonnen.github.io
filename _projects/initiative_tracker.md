@@ -3,8 +3,6 @@ layout: page
 title: Initiative Tracker
 ---
 
-
-
 ![](https://github.com/tsonnen/InitiativeTracker/raw/master/images/Initiative%20Tracker-feature-graphic.png)
 
 
@@ -38,4 +36,7 @@ This is the first release. This version had the features below
 
 
 ## Feature List for Next Release
-* TBD :)
+* Added documentation to help users
+* Added notes for users to keep track of character information (EX Armor
+ Class)
+* Added user specified dice mod for auto-rolling initiative
