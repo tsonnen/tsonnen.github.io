@@ -64,12 +64,12 @@ of code that I would need to write and maintain.
 
 ... Or so I thought. As of the time of writing, relative anchors do not 
 seem to be supported in flutter markdown. This would mean that I would
-need to find a different solution. I decided to use ` onTapLink ` from 
-the ` Markdown ` widget. This would allow for me to load in. a markdown file
+need to find a different solution. I decided to use `onTapLink` from 
+the `Markdown` widget. This would allow for me to load in. a markdown file
 based on what link is cicked. This does mean that I would need to create 
 markdown files for each topic. While this does create a little bit of bloat
 in the sheer amont of files, it does force the pages to be easier to read 
-and maintain. Adding in the ` onTapLink ` hook was fairly trivial. With a 
+and maintain. Adding in the `onTapLink` hook was fairly trivial. With a 
 little bit of tweaking to the actual markdown files, this method 
 worked really well and very smoothly. Thre was just one issue left, users 
 had no method to retrace their steps and go back to previous pages.
