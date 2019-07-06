@@ -13,8 +13,17 @@ Please feel free to contact me with any questions, bugs, or feature requests.
 <a href="https://play.google.com/store/apps/details?id=com.tsonnen.initiativetracker"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
 
 ## Releases
-* [1.1.31](#1131) (Current Build)
+* [1.2.37](#1237) (Current Build)
+* [1.1.31](#1131)
 * [1.0.0](#100)
+
+
+### 1.2.37
+* Added documentation to help users
+* Added notes for users to keep track of character information (EX Armor
+ Class)
+* Added user specified dice mod for auto-rolling initiative
+* Setting base work for parties
 
 ### 1.1.31
 First update.
@@ -35,8 +44,6 @@ This is the first release. This version had the features below
 * Add multiple characters of the same type
 
 
-## Feature List for Next Release
-* Added documentation to help users
-* Added notes for users to keep track of character information (EX Armor
- Class)
-* Added user specified dice mod for auto-rolling initiative
+##  Feature List for Next Release
+* Allow for saving/loading parties
+* Possibly more TBD
