@@ -13,10 +13,16 @@ Please feel free to contact me with any questions, bugs, or feature requests.
 <a href="https://play.google.com/store/apps/details?id=com.tsonnen.initiativetracker"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
 
 ## Releases
-* [1.2.37](#1237) (Current Build)
+* [1.3.51](#1351) (Current Build)
+* [1.2.37](#1237)
 * [1.1.31](#1131)
 * [1.0.0](#100)
 
+### 1.3.51
+This is my last planned update. I am planning on keeping up with 
+any an all new feature requests. I also plan on some code 
+refactoring as well as adding in more automated testing.
+* Allow for saving/loading parties
 
 ### 1.2.37
 * Added documentation to help users
@@ -43,7 +49,5 @@ This is the first release. This version had the features below
 * Edit characters
 * Add multiple characters of the same type
 
-
-##  Feature List for Next Release
-* Allow for saving/loading parties
-* Possibly more TBD
+## Features for Upcoming Release
+* TBD :)
