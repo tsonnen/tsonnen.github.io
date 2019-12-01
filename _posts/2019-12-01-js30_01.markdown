@@ -3,8 +3,11 @@ layout: post
 title:  "JS 30:01 - JavaScript Drum Kit"
 date:   2019-12-01 0:00:01 -0800
 category: JavaScript30
+demo: https://tsonnen.github.io/JavaScript30/Day01/index.html
 tag: [javascript,JavaScript30]
 ---
+
+You can see a live demo [here](https://tsonnen.github.io/JavaScript30/Day01/index.html)!
 
 # Overview
 

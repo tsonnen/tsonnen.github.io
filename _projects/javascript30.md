@@ -11,6 +11,8 @@ This is my code from the JavaScript 30 course. The course can be found <a href="
 {% if posts.size > 0 %}
 ## Pages
 {% for post in  posts%}
-  <li><a href = "{{post.url}}">{{ post.title | remove: "JS 30:"}}</a></li>
+* {{ post.title | remove: "JS 30:"}}
+    * <a href = "{{post.url}}">Write-Up</a>
+    * <a href = "{{post.demo}}">Demo</a>
 {% endfor %}
 {% endif %}
