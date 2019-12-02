@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "JS 30:02 - CSS + JS Clock"
+date:   2019-12-03 00:00:01 -0800
+category: JavaScript30
+demo: https://tsonnen.github.io/JavaScript30/Day03/index.html
+tag: [javascript,JavaScript30]
+---
+
+You can see a live demo [here](https://tsonnen.github.io/JavaScript30/Day03/index.html)!
+
+# Overview
+
+This lesson was very interesting. I enjoyed learning about using CSS variables and the ability to manipulate them using JavaScript. I think that this challenge lays some very good ground work for future expansions.
+
+# Challenges
+
+This was a very straight forward lesson/challenge. I didn't find any part of it super challenging.
+
+# Additions
+
+* Ability to change the image transparency
