@@ -13,10 +13,20 @@ Please feel free to contact me with any questions, bugs, or feature requests.
 <a href="https://play.google.com/store/apps/details?id=com.tsonnen.initiativetracker"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
 
 ## Releases
-* [1.3.51](#1351) (Current Build)
+* [2.0.55](#2055) (Current Build)
+* [1.3.51](#1351)
 * [1.2.37](#1237)
 * [1.1.31](#1131)
 * [1.0.0](#100)
+
+## 2.0.55
+* Allow characters to have different colors
+* Allow users to choose what displays
+* Save initiative modifier to re-roll party
+* Fix UI formatting issues
+* Various bug fixes
+* Clean backend
+* Add Introductory dialog on first launch
 
 ### 1.3.51
 This is my last planned update. I am planning on keeping up with 
