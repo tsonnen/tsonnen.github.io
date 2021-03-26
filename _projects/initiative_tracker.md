@@ -60,10 +60,4 @@ This is the first release. This version had the features below
 * Add multiple characters of the same type
 
 ## Features for Upcoming Release
-* Allow characters to have different colors
-* Allow users to choose what displays
-* Save initiative modifier to re-roll party
-* Fix UI formatting issues
-* Various bug fixes
-* Clean backend
-* Add Introductory dialog on first launch
+* TBD :)
