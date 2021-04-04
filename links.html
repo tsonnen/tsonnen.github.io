@@ -1,0 +1,85 @@
+<style type="text/css" media="screen">
+    .container {
+        margin: 10px auto;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+
+    button {
+        border: none;
+        padding: 14px 28px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        color: black;
+        margin: 10px;
+        white-space: normal;
+        width: 500px;
+    }
+</style>
+
+<script>
+    function getPastelColor() {
+        return `hsl(${360 * Math.random()},` +
+            `${(25 + 70 * Math.random())}%,` +
+            `${(85 + 10 * Math.random())}%)`
+    }
+
+    function getColor() {
+        return Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function recolorButttons() {
+        var buttons = Array.prototype.slice.call(document.getElementsByTagName('button'));
+        buttons.forEach(element => {
+            var tmp = getPastelColor();
+            element.style.backgroundColor = tmp;
+        });
+    }
+
+    function recolorPage() {
+        var tmp = `linear-gradient(` +
+            `${Math.floor(Math.random()*180)}deg, #${getColor()}, ` +
+            `#${getColor()})`;
+        document.body.style.background = tmp;
+        recolorButttons();
+    }
+</script>
+
+<body onload="recolorPage()">
+
+    <div class="container">
+        <h1>Links</h1>
+        <div>
+            <a href="https://play.google.com/store/apps/details?id=com.tsonnen.initiativetracker">
+                <button>
+                    Initiative Tracker (Android Only)
+                </button>
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/tsonnen67">
+                <button>
+                    Twitter
+                </button>
+            </a>
+        </div>
+        <div>
+            <a href="https://github.com/tsonnen">
+                <button>
+                    Github
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</body>
