@@ -5,22 +5,28 @@
     }
 
     h1 {
-        margin:5%;
+        margin: 5%;
         font-size: 1000%;
         line-height: 1;
         letter-spacing: -1px;
+    }
+
+    html {
+        height: 100%;
+        overflow: hidden;
     }
 
     button {
         border: none;
         padding: 1%;
         font-weight: bold;
-        font-size: 150%;
+        font-size: 200%;
         color: black;
         margin: 1%;
         white-space: normal;
         width: 90%;
-        vertical-align: middle
+        vertical-align: middle;
+        border-radius: 25px;
     }
 </style>
 
@@ -44,9 +50,8 @@
     }
 
     function recolorPage() {
-        var tmp = `linear-gradient(` +
-            `${Math.floor(Math.random()*180)}deg, #${getColor()}, ` +
-            `#${getColor()})`;
+        var tmp = `radial-gradient(ellipse at bottom, #${getColor()} 0%, ` +
+            `#${getColor()} 100%)`;
         document.body.style.background = tmp;
         recolorButttons();
     }
