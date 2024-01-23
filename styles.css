@@ -29,3 +29,7 @@ section{
   filter: blur(0);
   transform: translateX(0);
 }
+
+.social_media_wrapper a {
+  text-decoration:none;
+}
